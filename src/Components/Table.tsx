@@ -263,9 +263,10 @@ export const Table = () => {
           </tr>
         ))}
 
-        <td ref={lastElement} style={{ backgroundColor: "red", opacity: 0 }}>
-          12312
-        </td>
+        <td
+          ref={lastElement}
+          style={{ backgroundColor: "red", opacity: 0 }}
+        ></td>
       </tbody>
     </table>
   )
