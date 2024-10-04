@@ -33,12 +33,10 @@ export const companySlice = createSlice({
     changeColor: (state, action: PayloadAction<number>) => {
       const index = action.payload
       if (state.selectedRowIndex.includes(index)) {
-        // Если индекс уже выбран, удаляем его
         state.selectedRowIndex = state.selectedRowIndex.filter(
           (i) => i !== index
         )
       } else {
-        // Иначе добавляем индекс в массив
         state.selectedRowIndex.push(index)
       }
     },
@@ -46,10 +44,10 @@ export const companySlice = createSlice({
       state.selectedRowIndex = action.payload
     },
     clearAll: (state) => {
-      state.selectedRowIndex = [] // Очищаем массив выделенных индексов
+      state.selectedRowIndex = []
     },
     deleteChecked: (state) => {
-      state.selectedRowIndex = [] // Очищаем массив выделенных индексов
+      state.selectedRowIndex = []
     },
     addNewCompany: (state, action) => {
       const existingCompany = state.list.find(
